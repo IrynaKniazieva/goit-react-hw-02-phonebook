@@ -24,10 +24,22 @@ handleChange = evt => {
   //Вызывается при отправке формы
 handleSubmit = evt => {
     evt.preventDefault();
+
+    // const newContact = {
+    //   id: nanoid(),
+    //   name: this.state.name,
+    //   number: this.state.number,
+    // };
+
     
-    this.props.onSubmit(this.state);
+    // this.props.onSubmit(this.state);
+
+    //добавляю новый контакт
+    this.props.onAddContact(this.state)
+    
     //чищу форму после нажатия на кнопку "add contact"
     this.reset();
+
   }
 
     // Очистить форму
