@@ -28,6 +28,7 @@ class App extends React.Component {
     this.setState({ filter: evt.currentTarget.value });
   };
 
+  // Удаление контакта 
   deleteContact = contactId => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== contactId),
@@ -56,7 +57,7 @@ class App extends React.Component {
       <Filter
       filter={this.state.filter} 
       onChange={this.changeFilter}/>
-       <ContactList>
+      <ContactList>
          <ContactItem
          contacts={this.getVisibleContact()}
          onDeleteContact={this.deleteContact}/>
