@@ -1,10 +1,10 @@
 import React from "react"
-import styles from './App/App.module.css'
+import styles from './App.module.css'
 
-import ContactForm from "./ContactForm/ContactForm"
-import ContactList from "./ContactList/ContactList"
-import ContactItem from "./ContactItem/ContactItem"
-import Filter from "./Filter/Filter"
+import ContactForm from "../ContactForm/ContactForm"
+import ContactList from "../ContactList/ContactList"
+import ContactItem from "../ContactItem/ContactItem"
+import Filter from "../Filter/Filter"
 
 class App extends React.Component {
   state = {
