@@ -9,16 +9,18 @@ class ContactForm extends React.Component {
   state = {
     name: '',
     number: '',
+    
   };
 
   //----------Уникальные id, библиотека nanoid------
   nameInputId = nanoid();
   numberInputId = nanoid();
 
-  // ---------Показывает то что ввожу в инпут--------
+  // ---------Показывает то что ввожу в инпут / изменения --------
   handleChange = evt => {
     const { name, value } = evt.currentTarget;
-    this.setState({ [name]: value });
+    this.setState({ [name]: value, id: nanoid(), });
+    
   };
 
   //----------Вызывается при отправке формы---------

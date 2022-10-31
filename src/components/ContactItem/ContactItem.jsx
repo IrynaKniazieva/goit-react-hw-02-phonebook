@@ -3,9 +3,9 @@ import styles from './ContactItem.module.css'
 import PropTypes from "prop-types"
 
 const ContactItem = ({contacts, onDeleteContact}) => (
-    <>
+    <> 
         {contacts.map(({ name, number, id}) => (
-            <li className={styles.contactItem} key={id}>
+            <li key={id} className={styles.contactItem}>
                 {name} : <span>{number}</span>
                 <button className={styles.button} onClick={() => onDeleteContact(id)}>Delete</button>  
             </li>
