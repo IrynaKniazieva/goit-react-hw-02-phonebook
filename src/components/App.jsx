@@ -1,4 +1,5 @@
 import React from "react"
+import styles from './App/App.module.css'
 
 import ContactForm from "./ContactForm/ContactForm"
 import ContactList from "./ContactList/ContactList"
@@ -52,11 +53,11 @@ class App extends React.Component {
     const { filter } = this.state;
 
     return (
-      <div>
-        <h1 className={}>Phonebook</h1>
+      <div className={styles.sectionContacts}>
+        <h1 className={styles.title}>Phonebook</h1>
         <ContactForm onAddContact={this.addContact} />
 
-        <h2 className={}>Contacts</h2>
+        <h2 className={styles.title}>Contacts</h2>
         <Filter filter={filter} onChange={this.changeFilter} />
         <ContactList>
           <ContactItem
